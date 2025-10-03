@@ -13,6 +13,9 @@ import (
 
 // Config holds the config options for an Azure backend
 type Config struct {
+	AzTenantID              string         `yaml:"az_tenant_id"`
+	ClientID                string         `yaml:"client_id"`
+	ClientSecret            flagext.Secret `yaml:"client_secret"`
 	StorageAccountName      string         `yaml:"account_name"`
 	StorageAccountKey       flagext.Secret `yaml:"account_key"`
 	StorageConnectionString flagext.Secret `yaml:"connection_string"`
